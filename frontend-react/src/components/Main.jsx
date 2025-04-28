@@ -25,7 +25,7 @@ export default function MainLanding() {
         </p>
 
         {/* Login Button */}
-        <Button text='Login' class='btn-primary btn-lg'/>
+        <Button text='Explore Your Dashboard' class='btn-primary btn-lg' url='/dashboard'/>
 
 
 
