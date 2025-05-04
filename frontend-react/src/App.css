@@ -1,0 +1,23 @@
+.custom-form {
+    background-color: #f8f9fa;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-form input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  
+  .custom-form button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  
+  .evaluation p {
+    margin: 4px 0;
+  }
+  

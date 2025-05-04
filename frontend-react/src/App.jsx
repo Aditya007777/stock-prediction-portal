@@ -4,7 +4,6 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Router } from 'lucide-react'
 import Register from './components/Register'
 import Login from './components/Login'
 import AuthProvider from './AuthProvider'
@@ -13,25 +12,25 @@ import PrivateRoute from './PrivateRoute'
 import PublicRoute from './PublicRoute'
 
 function App() {
-
-
   return (
-    <>
     <AuthProvider>
-    <BrowserRouter>
-    <Header/>
+      <BrowserRouter>
+        <div className="d-flex flex-column min-vh-100">
+          <Header />
+          
+          <main className="flex-grow-1">
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
+              <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+              <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+            </Routes>
+          </main>
 
-      <Routes>
-        <Route path="/" element={<Main/>} />
-        <Route path="/register" element={<PublicRoute><Register/></PublicRoute>} />
-        <Route path="/login" element={<PublicRoute><Login/></PublicRoute>} />
-        <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-      </Routes>
-      
-    <Footer/>
-    </BrowserRouter>
+          <Footer />
+        </div>
+      </BrowserRouter>
     </AuthProvider>
-    </>
   )
 }
 
